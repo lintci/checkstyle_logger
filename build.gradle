@@ -11,7 +11,7 @@ dependencies {
 }
 
 task fatJar(type: Jar) {
-    baseName = project.name + '6.6-all'
+    baseName = project.name + '-6.6-all'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     manifest { attributes 'Main-Class': 'com.puppycrawl.tools.checkstyle.Main' }
     with jar
